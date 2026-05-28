@@ -18,7 +18,7 @@
   --gold:#BF8A2E;--gold-light:#D9AB5A;--gold-pale:#F0D49A;
   --ochre:#9A4F22;--red-dark:#7A1F1F;--red:#A03030;
   --text:#1E0E04;--text-mid:#4A2A12;--text-light:#7A5538;
-  --white:#FEFCF5;
+  --white:#FEFCF5;--parchment-dim:#D8C9AE;
   --step-1:#5C7C5A;--step-2:#7A4E2D;--step-3:#BF8A2E;
   --step-4:#9A4F22;--step-5:#5577AA;--step-6:#7A1F1F;
 }
@@ -49,8 +49,9 @@ li{margin-bottom:.4em}
 /* ===== NAV ===== */
 nav{background:var(--brown-deep);padding:13px clamp(16px,4vw,24px);position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:16px}
 .nav-brand{color:var(--brown-pale);font-family:'Crimson Pro',serif;font-size:1.08rem;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:10px;white-space:nowrap}
-.nav-links{display:flex;gap:18px;list-style:none;margin-left:auto;flex-wrap:wrap}
-.nav-links a{color:var(--brown-pale);text-decoration:none;font-size:.78rem;letter-spacing:.04em;opacity:.62;transition:opacity .2s}
+.nav-links{display:flex;gap:14px;list-style:none;margin-left:auto;flex-wrap:nowrap}
+.nav-links li{white-space:nowrap}
+.nav-links a{color:var(--brown-pale);text-decoration:none;font-size:.76rem;letter-spacing:.02em;opacity:.62;transition:opacity .2s;white-space:nowrap}
 .nav-links a:hover{opacity:1}
 @media(max-width:880px){.nav-links{display:none}}
 
@@ -95,7 +96,7 @@ nav{background:var(--brown-deep);padding:13px clamp(16px,4vw,24px);position:stic
 .chart-wrap{background:var(--white);border-radius:14px;padding:22px;box-shadow:0 4px 26px rgba(46,20,7,.1);margin:28px 0;overflow-x:auto}
 .chart-wrap svg{display:block;width:100%;height:auto;min-width:340px;font-family:'Inter',sans-serif}
 .chart-title{font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--text-light);margin-bottom:6px}
-.chart-note{font-size:.74rem;color:var(--text-light);margin-top:10px;font-style:italic;line-height:1.5}
+.chart-note{font-size:.84rem;color:var(--text-light);margin-top:10px;font-style:italic;line-height:1.5}
 .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px}
 .legend-item{display:flex;align-items:center;gap:7px;font-size:.77rem;color:var(--text-mid)}
 .leg-line{width:24px;height:3px;border-radius:2px;flex-shrink:0}
@@ -110,7 +111,7 @@ nav{background:var(--brown-deep);padding:13px clamp(16px,4vw,24px);position:stic
 .big-stat-box.blue{background:linear-gradient(135deg,#1e3a5f 0%,#2e5577 100%)}
 /* conclusion numbers ~20% bigger than before (3rem -> 3.6rem) and bigger than surrounding text */
 .bsn{font-family:'Crimson Pro',serif;font-size:clamp(2.6rem,5vw,3.6rem);font-weight:700;display:block;line-height:1.02;margin-bottom:8px;letter-spacing:-.02em}
-.bst{font-size:.97rem;opacity:.92;margin:0;color:#fff;line-height:1.55}
+.bst{font-size:1.06rem;opacity:.92;margin:0;color:#fff;line-height:1.55}
 
 /* ===== COMPARISON TABLE ===== */
 .comp-table{width:100%;border-collapse:collapse;font-size:.9rem;margin:20px 0}
@@ -154,7 +155,7 @@ nav{background:var(--brown-deep);padding:13px clamp(16px,4vw,24px);position:stic
 .s-title{font-family:'Crimson Pro',serif;font-size:1.55rem;font-weight:700;color:#fff;line-height:1.15;margin-bottom:0}
 .s-row{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.1)}
 .s-row:last-child{border-bottom:none}
-.s-k{font-size:.78rem;color:rgba(255,255,255,.58)}
+.s-k{font-size:.86rem;color:rgba(255,255,255,.58)}
 .s-v{font-family:'Crimson Pro',serif;font-size:1.05rem;font-weight:600;color:rgba(255,255,255,.92);text-align:right}
 .s-v.highlight-good{color:#90c890}.s-v.highlight-warn{color:#e0c060}.s-v.highlight-bad{color:#e08080}
 @media(max-width:860px){.scenario-grid{grid-template-columns:1fr}}
@@ -181,7 +182,7 @@ nav{background:var(--brown-deep);padding:13px clamp(16px,4vw,24px);position:stic
 .grass-footer{background:var(--green-dark);padding:60px 24px 80px;position:relative}
 .grass-footer::before{content:'';display:block;position:absolute;top:-36px;left:0;right:0;height:58px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 58' preserveAspectRatio='none'%3E%3Cpath d='M0,58 L0,28 Q60,0 120,28 Q180,56 240,28 Q300,0 360,28 Q420,56 480,28 Q540,0 600,28 Q660,56 720,28 Q780,0 840,28 Q900,56 960,28 Q1020,0 1080,28 Q1140,56 1200,28 L1200,58 Z' fill='%23354D35'/%3E%3C/svg%3E");background-size:100% 100%}
 .grass-footer h2,.grass-footer h3{color:var(--green-pale)}
-.grass-footer p{color:var(--green-pale);opacity:.82}
+.grass-footer p{color:#EAF4E8;opacity:1;font-size:1.05rem;line-height:1.65}
 .sources{margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,.12)}
 .sources h4{color:var(--green-pale);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;font-family:'Inter',sans-serif}
 .sources li{font-size:.78rem;color:var(--green-pale);opacity:.6;margin-bottom:4px}
@@ -212,7 +213,7 @@ nav{background:var(--brown-deep);padding:13px clamp(16px,4vw,24px);position:stic
 .ledger-title{font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);margin-bottom:14px}
 .ledger-row{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid var(--parchment2)}
 .ledger-row:last-child{border-bottom:none}
-.ledger-row .lk{font-size:.88rem;color:var(--text-mid)}
+.ledger-row .lk{font-size:.97rem;color:var(--text-mid)}
 .ledger-row .lv{font-weight:700;color:var(--brown-deep);white-space:nowrap;text-align:right}
 
 /* ===== DAILY CLOCK ===== */
@@ -231,14 +232,14 @@ nav{background:var(--brown-deep);padding:13px clamp(16px,4vw,24px);position:stic
 .money-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:22px 18px}
 .money-who{font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-light);display:block;margin-bottom:8px}
 .money-amt{font-family:'Crimson Pro',serif;font-size:clamp(1.7rem,3.4vw,2.3rem);font-weight:700;color:#fff;display:block;line-height:1.05;margin-bottom:6px}
-.money-desc{font-size:.82rem;color:rgba(255,255,255,.72);line-height:1.45}
+.money-desc{font-size:.96rem;color:rgba(255,255,255,.72);line-height:1.45}
 
 /* ===== FATE CARDS (male calf) ===== */
 .fate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}
 @media(max-width:760px){.fate-grid{grid-template-columns:1fr}}
 .fate-card{background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:22px}
 .fate-h{font-family:'Crimson Pro',serif;font-size:1.35rem;font-weight:700;color:#f0d49a;margin-bottom:8px;line-height:1.2}
-.fate-p{font-size:.9rem;color:rgba(255,255,255,.78);line-height:1.55;margin:0}
+.fate-p{font-size:1.02rem;color:rgba(255,255,255,.78);line-height:1.55;margin:0}
 
 /* ===== LANGUAGE SWITCHER ===== */
 .lang-switcher{display:flex;gap:5px;margin-left:auto}
@@ -318,7 +319,7 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
       <h1>
         <span class="en">India makes the most milk in the world.<br><em style="color:var(--gold-light)">Here is the full picture.</em></span>
         <span class="hi">भारत दुनिया में सबसे ज़्यादा दूध बनाता है।<br><em style="color:var(--gold-light)">यह रही पूरी तस्वीर।</em></span>
-        <span class="gu">ભારત દુનિયામાં સૌથી વધુ દૂધ બનાવે છે.<br><em style="color:var(--gold-light)">આ રહી પૂરી તસવીર.</em></span>
+        <span class="gu">ભારત દુનિયામાં સૌથી વધુ દૂધ ઉત્પાદન કરે છે.<br><em style="color:var(--gold-light)">આ રહી પૂરી તસવીર.</em></span>
       </h1>
       <p class="hero-sub">
         <span class="en">Not just the number on the packet. The cow behind the litre. The calf behind the cow. Every day, <strong>1.48 lakh cattle</strong> leave India's dairy system, and we still call her our mother.</span>
@@ -440,13 +441,13 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
 
     <div class="two-col">
       <div>
-        <p class="fade"><span class="en">In 2023-24, India made <strong>23.93 crore tonnes of milk</strong>. That makes India the <strong>biggest milk producer in the world</strong>, more than all of Europe put together. Every single day, India produces roughly <strong>65.7 crore litres of milk</strong>.</span><span class="hi">2023-24 में भारत ने <strong>23.93 करोड़ टन दूध</strong> बनाया। इससे भारत <strong>दुनिया का सबसे बड़ा दूध उत्पादक</strong> है, पूरे यूरोप से भी ज़्यादा। हर दिन भारत लगभग <strong>65.7 करोड़ लीटर दूध</strong> बनाता है।</span><span class="gu">2023-24માં ભારતે <strong>23.93 કરોડ ટન દૂધ</strong> બનાવ્યું. તેથી ભારત <strong>દુનિયાનું સૌથી મોટું દૂધ ઉત્પાદક</strong> છે, આખા યુરોપ કરતાં પણ વધારે. દરરોજ ભારત આશરે <strong>65.7 કરોડ લિટર દૂધ</strong> બનાવે છે.</span></p>
+        <p class="fade"><span class="en">In 2023-24, India made <strong>23.93 crore tonnes of milk</strong>. That makes India the <strong>biggest milk producer in the world</strong>, more than all of Europe put together. Every single day, India produces roughly <strong>65.7 crore litres of milk</strong>.</span><span class="hi">2023-24 में भारत ने <strong>23.93 करोड़ टन दूध</strong> बनाया। इससे भारत <strong>दुनिया का सबसे बड़ा दूध उत्पादक</strong> है, पूरे यूरोप से भी ज़्यादा। हर दिन भारत लगभग <strong>65.7 करोड़ लीटर दूध</strong> बनाता है।</span><span class="gu">2023-24માં ભારતે <strong>23.93 કરોડ ટન દૂધ</strong> ઉત્પાદન કર્યું. તેથી ભારત <strong>દુનિયાનું સૌથી મોટું દૂધ ઉત્પાદક</strong> છે, આખા યુરોપ કરતાં પણ વધારે. દરરોજ ભારત આશરે <strong>65.7 કરોડ લિટર દૂધ</strong> બનાવે છે.</span></p>
         <p class="fade"><span class="en">Of this, about <strong>47% comes from cows</strong>. The rest is mostly buffalo milk (about 50%). Goats and sheep give a small share.</span><span class="hi">इसमें से लगभग <strong>47% गायों से</strong> आता है। बाकी ज़्यादातर भैंस का दूध है (करीब 50%)। बकरी और भेड़ का हिस्सा छोटा है।</span><span class="gu">તેમાંથી આશરે <strong>47% ગાય પાસેથી</strong> આવે છે. બાકીનું મોટાભાગે ભેંસનું દૂધ છે (આશરે 50%). બકરી-ઘેટાંનો હિસ્સો નાનો છે.</span></p>
         <p class="fade"><span class="en">So cow milk alone is about <strong>11.2 crore tonnes per year</strong>, or roughly <strong>30.7 crore litres of cow milk every day</strong> in India.</span><span class="hi">यानी अकेले गाय का दूध करीब <strong>11.2 करोड़ टन प्रति वर्ष</strong> है, या लगभग <strong>30.7 करोड़ लीटर गाय का दूध हर दिन</strong> भारत में।</span><span class="gu">એટલે ફક્ત ગાયનું દૂધ આશરે <strong>11.2 કરોડ ટન પ્રતિ વર્ષ</strong> છે, અથવા ભારતમાં આશરે <strong>30.7 કરોડ લિટર ગાયનું દૂધ દરરોજ</strong>.</span></p>
 
         <div class="big-stat-box green fade">
           <span class="bsn">30.7 <span style="font-size:.5em;font-weight:600"><span class="en">crore litres</span><span class="hi">करोड़ लीटर</span><span class="gu">કરોડ લિટર</span></span></span>
-          <p class="bst"><span class="en">of cow milk produced in India every single day</span><span class="hi">गाय का दूध भारत में हर दिन बनता है</span><span class="gu">ગાયનું દૂધ ભારતમાં દરરોજ બને છે</span></p>
+          <p class="bst"><span class="en">of cow milk produced in India every single day</span><span class="hi">गाय का दूध भारत में हर दिन बनता है</span><span class="gu">ગાયનું દૂધ ભારતમાં દરરોજ ઉત્પન્ન થાય છે</span></p>
         </div>
 
         <p class="fade"><span class="en">India has been the world's top milk producer since 1998. Output has grown for 23 years in a row, through droughts, Covid, every crisis. The number only goes up.</span><span class="hi">भारत 1998 से दुनिया का सबसे बड़ा दूध उत्पादक है। उत्पादन लगातार 23 साल बढ़ा है, सूखे में, कोविड में, हर संकट में। यह आँकड़ा सिर्फ़ बढ़ता ही है।</span><span class="gu">ભારત 1998થી દુનિયાનું સૌથી મોટું દૂધ ઉત્પાદક છે. ઉત્પાદન સતત 23 વર્ષ વધ્યું છે, દુષ્કાળમાં, કોવિડમાં, દરેક સંકટમાં. આ આંકડો ફક્ત વધતો જ રહે છે.</span></p>
@@ -581,7 +582,7 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
       </div>
     </div>
 
-    <p class="fade" style="max-width:820px"><span class="en">Hold two numbers in your mind at once: how many cows India had, and how much milk they produced. The gap between those two growth curves is where the real story lives.</span><span class="hi">एक साथ दो आँकड़े याद रखिए: भारत के पास कितनी गायें थीं, और उन्होंने कितना दूध बनाया। इन दो वृद्धि रेखाओं के बीच का अंतर ही असली कहानी है।</span><span class="gu">એકસાથે બે આંકડા યાદ રાખો: ભારત પાસે કેટલી ગાય હતી, અને તેમણે કેટલું દૂધ બનાવ્યું. આ બે વૃદ્ધિ રેખાઓ વચ્ચેનો ફરક જ સાચી વાર્તા છે.</span></p>
+    <p class="fade" style="max-width:820px"><span class="en">Hold two numbers in your mind at once: how many cows India had, and how much milk they produced. The gap between those two growth curves is where the real story lives.</span><span class="hi">एक साथ दो आँकड़े याद रखिए: भारत के पास कितनी गायें थीं, और उन्होंने कितना दूध बनाया। इन दो वृद्धि रेखाओं के बीच का अंतर ही असली कहानी है।</span><span class="gu">એકસાથે બે આંકડા યાદ રાખો: ભારત પાસે કેટલી ગાય હતી, અને તેમણે કેટલું દૂધ ઉત્પાદન કર્યું. આ બે વૃદ્ધિ રેખાઓ વચ્ચેનો ફરક જ સાચી વાર્તા છે.</span></p>
 
     <div class="two-col" style="margin-top:28px">
       <div>
@@ -664,7 +665,7 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
       </div>
     </div>
 
-    <p class="lead fade"><span class="en">Milk per cow went from ~1.1 litres/day (1972) to ~8.1 litres/day (2024). That is a <strong>636% increase</strong>. A cow's body cannot just make more milk on its own. <strong>More milk per cow means more pregnancies per cow.</strong></span><span class="hi">प्रति गाय दूध ~1.1 लीटर/दिन (1972) से बढ़कर ~8.1 लीटर/दिन (2024) हो गया। यह <strong>636% की वृद्धि</strong> है। गाय का शरीर अपने आप ज़्यादा दूध नहीं बना सकता। <strong>प्रति गाय ज़्यादा दूध का मतलब प्रति गाय ज़्यादा गर्भ।</strong></span><span class="gu">પ્રતિ ગાય દૂધ ~1.1 લિટર/દિન (1972)થી વધીને ~8.1 લિટર/દિન (2024) થયું. આ <strong>636% વૃદ્ધિ</strong> છે. ગાયનું શરીર જાતે વધુ દૂધ બનાવી ન શકે. <strong>પ્રતિ ગાય વધુ દૂધ એટલે પ્રતિ ગાય વધુ ગર્ભ.</strong></span></p>
+    <p class="lead fade"><span class="en">Milk per cow went from ~1.1 litres/day (1972) to ~8.1 litres/day (2024). That is a <strong>636% increase</strong>. A cow's body cannot just make more milk on its own. <strong>More milk per cow means more pregnancies per cow.</strong></span><span class="hi">प्रति गाय दूध ~1.1 लीटर/दिन (1972) से बढ़कर ~8.1 लीटर/दिन (2024) हो गया। यह <strong>636% की वृद्धि</strong> है। गाय का शरीर अपने आप ज़्यादा दूध नहीं बना सकता। <strong>प्रति गाय ज़्यादा दूध का मतलब प्रति गाय ज़्यादा गर्भ।</strong></span><span class="gu">પ્રતિ ગાય દૂધ ~1.1 લિટર/દિન (1972)થી વધીને ~8.1 લિટર/દિન (2024) થયું. આ <strong>636% વૃદ્ધિ</strong> છે. ગાયનું શરીર જાતે વધુ દૂધ ઉત્પન્ન કરી ન શકે. <strong>પ્રતિ ગાય વધુ દૂધ એટલે પ્રતિ ગાય વધુ ગર્ભ.</strong></span></p>
 
     <div class="two-col">
       <div>
@@ -710,15 +711,15 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
 
         <div class="big-stat-box dark fade" style="margin-bottom:16px">
           <span class="bsn" style="font-size:1.55rem;margin-bottom:4px"><span class="en">1. More pregnancies per year</span><span class="hi">1. हर साल ज़्यादा गर्भ</span><span class="gu">1. દર વર્ષે વધુ ગર્ભ</span></span>
-          <p class="bst" style="font-size:.9rem"><span class="en">Natural: one pregnancy every 18-24 months. Industrial: one every 12-14 months. Done through artificial breeding plus hormones. Result: about 50% more milking cycles in her life.</span><span class="hi">प्राकृतिक: हर 18-24 माह में एक गर्भ। औद्योगिक: हर 12-14 माह में एक। कृत्रिम गर्भाधान और हार्मोन से। नतीजा: उसके जीवन में करीब 50% ज़्यादा दूध-चक्र।</span><span class="gu">કુદરતી: દર 18-24 માસે એક ગર્ભ. ઔદ્યોગિક: દર 12-14 માસે એક. કૃત્રિમ ગર્ભાધાન અને હોર્મોનથી. પરિણામ: તેના જીવનમાં આશરે 50% વધુ દૂધ-ચક્ર.</span></p>
+          <p class="bst" style="font-size:1rem"><span class="en">Natural: one pregnancy every 18-24 months. Industrial: one every 12-14 months. Done through artificial breeding plus hormones. Result: about 50% more milking cycles in her life.</span><span class="hi">प्राकृतिक: हर 18-24 माह में एक गर्भ। औद्योगिक: हर 12-14 माह में एक। कृत्रिम गर्भाधान और हार्मोन से। नतीजा: उसके जीवन में करीब 50% ज़्यादा दूध-चक्र।</span><span class="gu">કુદરતી: દર 18-24 માસે એક ગર્ભ. ઔદ્યોગિક: દર 12-14 માસે એક. કૃત્રિમ ગર્ભાધાન અને હોર્મોનથી. પરિણામ: તેના જીવનમાં આશરે 50% વધુ દૂધ-ચક્ર.</span></p>
         </div>
         <div class="big-stat-box dark fade" style="margin-bottom:16px">
           <span class="bsn" style="font-size:1.55rem;margin-bottom:4px"><span class="en">2. High-yield breed genetics</span><span class="hi">2. ज़्यादा दूध वाली नस्लें</span><span class="gu">2. વધુ દૂધ આપતી ઓલાદ</span></span>
-          <p class="bst" style="font-size:.9rem"><span class="en">Desi breeds (Gir, Sahiwal, Rathi) give 3-8 L/day. Cross-bred cattle (HF, Jersey cross) give 10-20 L/day. Cross-bred numbers rose from 3.97 crore to 5.04 crore between 2012 and 2019 (+27%).</span><span class="hi">देसी नस्लें (गिर, साहीवाल, राठी) 3-8 लीटर/दिन देती हैं। संकर नस्लें (HF, जर्सी क्रॉस) 10-20 लीटर/दिन। संकर संख्या 2012 से 2019 के बीच 3.97 करोड़ से 5.04 करोड़ हुई (+27%)।</span><span class="gu">દેશી ઓલાદ (ગીર, સાહીવાલ, રાઠી) 3-8 લિટર/દિન આપે. સંકર ઓલાદ (HF, જર્સી ક્રોસ) 10-20 લિટર/દિન. સંકર સંખ્યા 2012થી 2019 વચ્ચે 3.97 કરોડથી 5.04 કરોડ થઈ (+27%).</span></p>
+          <p class="bst" style="font-size:1rem"><span class="en">Desi breeds (Gir, Sahiwal, Rathi) give 3-8 L/day. Cross-bred cattle (HF, Jersey cross) give 10-20 L/day. Cross-bred numbers rose from 3.97 crore to 5.04 crore between 2012 and 2019 (+27%).</span><span class="hi">देसी नस्लें (गिर, साहीवाल, राठी) 3-8 लीटर/दिन देती हैं। संकर नस्लें (HF, जर्सी क्रॉस) 10-20 लीटर/दिन। संकर संख्या 2012 से 2019 के बीच 3.97 करोड़ से 5.04 करोड़ हुई (+27%)।</span><span class="gu">દેશી ઓલાદ (ગીર, સાહીવાલ, રાઠી) 3-8 લિટર/દિન આપે. સંકર ઓલાદ (HF, જર્સી ક્રોસ) 10-20 લિટર/દિન. સંકર સંખ્યા 2012થી 2019 વચ્ચે 3.97 કરોડથી 5.04 કરોડ થઈ (+27%).</span></p>
         </div>
         <div class="big-stat-box dark fade">
           <span class="bsn" style="font-size:1.55rem;margin-bottom:4px"><span class="en">3. Selective culling</span><span class="hi">3. चुन-चुनकर हटाना</span><span class="gu">3. પસંદગીપૂર્વક હટાવવું</span></span>
-          <p class="bst" style="font-size:.9rem"><span class="en">Cows who give less milk are removed: abandoned, sold off, or quietly disposed of. The animals left in the census lean toward higher producers.</span><span class="hi">कम दूध देने वाली गायें हटा दी जाती हैं: छोड़ दी जाती हैं, बेच दी जाती हैं, या चुपचाप निपटा दी जाती हैं। जनगणना में बची गायें ज़्यादा दूध देने वालों की ओर झुकी होती हैं।</span><span class="gu">ઓછું દૂધ આપતી ગાય હટાવી દેવાય: છોડી દેવાય, વેચી દેવાય, કે ચૂપચાપ નિકાલ કરી દેવાય. વસ્તીગણતરીમાં બચેલી ગાય વધુ દૂધ આપનાર તરફ ઢળેલી હોય.</span></p>
+          <p class="bst" style="font-size:1rem"><span class="en">Cows who give less milk are removed: abandoned, sold off, or quietly disposed of. The animals left in the census lean toward higher producers.</span><span class="hi">कम दूध देने वाली गायें हटा दी जाती हैं: छोड़ दी जाती हैं, बेच दी जाती हैं, या चुपचाप निपटा दी जाती हैं। जनगणना में बची गायें ज़्यादा दूध देने वालों की ओर झुकी होती हैं।</span><span class="gu">ઓછું દૂધ આપતી ગાય હટાવી દેવાય: છોડી દેવાય, વેચી દેવાય, કે ચૂપચાપ નિકાલ કરી દેવાય. વસ્તીગણતરીમાં બચેલી ગાય વધુ દૂધ આપનાર તરફ ઢળેલી હોય.</span></p>
         </div>
 
         <p class="fade" style="margin-top:20px"><span class="en">All three point to the same thing: <strong>the cow is treated like a production machine</strong>, not a living being with her own needs.</span><span class="hi">तीनों एक ही बात की ओर इशारा करते हैं: <strong>गाय को एक उत्पादन मशीन की तरह देखा जाता है</strong>, अपनी ज़रूरतों वाले जीव की तरह नहीं।</span><span class="gu">ત્રણેય એક જ વાત તરફ ઈશારો કરે છે: <strong>ગાયને ઉત્પાદન મશીન જેવી ગણવામાં આવે છે</strong>, પોતાની જરૂરિયાતો ધરાવતા જીવ તરીકે નહીં.</span></p>
@@ -738,7 +739,7 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
       </div>
     </div>
 
-    <p class="lead fade" style="color:var(--brown-pale)"><span class="en">Every drop of milk needs the cow to be in her <em>lactation period</em>, the weeks and months after giving birth when her body makes milk. In nature this is limited. In industrial dairy, it is pushed as far as possible.</span><span class="hi">दूध की हर बूँद के लिए ज़रूरी है कि गाय अपने <em>दूध-काल</em> में हो, जन्म देने के बाद के वे हफ़्ते और महीने जब उसका शरीर दूध बनाता है। प्रकृति में यह सीमित होता है। औद्योगिक डेरी में इसे जितना हो सके बढ़ाया जाता है।</span><span class="gu">દૂધના દરેક ટીપા માટે જરૂરી છે કે ગાય તેના <em>દૂધ-કાળ</em>માં હોય, જન્મ આપ્યા પછીના એ અઠવાડિયા અને મહિના જ્યારે તેનું શરીર દૂધ બનાવે છે. કુદરતમાં આ મર્યાદિત હોય. ઔદ્યોગિક ડેરીમાં તેને બને તેટલું વધારવામાં આવે છે.</span></p>
+    <p class="lead fade" style="color:var(--brown-pale)"><span class="en">Every drop of milk needs the cow to be in her <em>lactation period</em>, the weeks and months after giving birth when her body makes milk. In nature this is limited. In industrial dairy, it is pushed as far as possible.</span><span class="hi">दूध की हर बूँद के लिए ज़रूरी है कि गाय अपने <em>दूध-काल</em> में हो, जन्म देने के बाद के वे हफ़्ते और महीने जब उसका शरीर दूध बनाता है। प्रकृति में यह सीमित होता है। औद्योगिक डेरी में इसे जितना हो सके बढ़ाया जाता है।</span><span class="gu">દૂધના દરેક ટીપા માટે જરૂરી છે કે ગાય તેના <em>દૂધ-કાળ</em>માં હોય, જન્મ આપ્યા પછીના એ અઠવાડિયા અને મહિના જ્યારે તેનું શરીર દૂધ ઉત્પાદન કરે છે. કુદરતમાં આ મર્યાદિત હોય. ઔદ્યોગિક ડેરીમાં તેને બને તેટલું વધારવામાં આવે છે.</span></p>
 
     <div class="two-col">
       <div>
@@ -875,7 +876,7 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
       </div>
       <div class="fate-card">
         <div class="fate-h"><span class="en">2. Slaughter and the meat trade</span><span class="hi">2. कटाई और मांस व्यापार</span><span class="gu">2. કતલ અને માંસ વેપાર</span></div>
-        <p class="fate-p"><span class="en">Cow slaughter is banned in most states. So animals are transported, often illegally and in brutal conditions, to states where it is legal, or across borders. India is among the world's largest exporters of bovine meat (mostly buffalo, carabeef).</span><span class="hi">गोवध ज़्यादातर राज्यों में प्रतिबंधित है। इसलिए जानवरों को, अक्सर अवैध और क्रूर हालात में, उन राज्यों या सीमाओं के पार ले जाया जाता है जहाँ यह क़ानूनी है। भारत दुनिया के सबसे बड़े गोजातीय मांस निर्यातकों में है (ज़्यादातर भैंस का)।</span><span class="gu">ગૌહત્યા મોટાભાગના રાજ્યોમાં પ્રતિબંધિત છે. તેથી પ્રાણીઓને, ઘણીવાર ગેરકાયદે અને ક્રૂર સ્થિતિમાં, એ રાજ્યો કે સરહદ પાર લઈ જવાય જ્યાં તે કાયદેસર છે. ભારત દુનિયાના સૌથી મોટા ગૌજાતીય માંસ નિકાસકારોમાં છે (મોટાભાગે ભેંસનું).</span></p>
+        <p class="fate-p"><span class="en">When a cow or bull stops being useful, the body is still worth money: skin for leather, bones, and meat. Cow slaughter is banned in most states, so cattle are moved, often illegally and in cruel conditions, to states or countries where it is legal. India's recorded meat exports are almost entirely buffalo (carabeef); the trade in cow and bull meat is mostly informal, domestic, and unrecorded.</span><span class="hi">जब गाय या बैल काम का नहीं रहता, तब भी उसके शरीर की कीमत होती है: चमड़े के लिए खाल, हड्डियाँ और मांस। गोवध ज़्यादातर राज्यों में प्रतिबंधित है, इसलिए मवेशियों को, अक्सर अवैध और क्रूर हालात में, उन राज्यों या देशों में ले जाया जाता है जहाँ यह क़ानूनी है। भारत का दर्ज मांस निर्यात लगभग पूरा भैंस (कैराबीफ़) का है; गाय और बैल के मांस का कारोबार ज़्यादातर अनौपचारिक, घरेलू और बिना रिकॉर्ड का है।</span><span class="gu">જ્યારે ગાય કે બળદ કામનો ન રહે, ત્યારે પણ તેના શરીરની કિંમત હોય: ચામડા માટે ચામડી, હાડકાં અને માંસ. ગૌહત્યા મોટાભાગના રાજ્યોમાં પ્રતિબંધિત છે, તેથી ઢોરને, ઘણીવાર ગેરકાયદે અને ક્રૂર સ્થિતિમાં, એ રાજ્યો કે દેશોમાં લઈ જવાય જ્યાં તે કાયદેસર છે. ભારતની નોંધાયેલી માંસ નિકાસ લગભગ આખી ભેંસ (કૈરાબીફ)ની છે; ગાય અને બળદના માંસનો વેપાર મોટાભાગે અનૌપચારિક, ઘરેલું અને બિનનોંધાયેલ છે.</span></p>
       </div>
       <div class="fate-card">
         <div class="fate-h"><span class="en">3. Leather and by-products</span><span class="hi">3. चमड़ा और उप-उत्पाद</span><span class="gu">3. ચામડું અને આડપેદાશ</span></div>
@@ -898,7 +899,7 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
       </div>
     </div>
 
-    <p class="fade" style="color:#a0988c;font-size:.9rem;text-align:center;max-width:760px;margin:24px auto 0"><span class="en">The same male calf is unwanted by the dairy, yet valuable to the meat and leather trade. That contradiction is exactly why the journey from a "sacred" birth to an export carton stays hidden from the milk packet.</span><span class="hi">वही नर बछड़ा डेरी के लिए अनचाहा है, फिर भी मांस और चमड़ा व्यापार के लिए मूल्यवान। यही विरोधाभास है जिसकी वजह से एक "पवित्र" जन्म से निर्यात के डिब्बे तक का सफ़र दूध के पैकेट से छिपा रहता है।</span><span class="gu">એ જ નર વાછરડું ડેરી માટે અણગમતું છે, છતાં માંસ અને ચામડા વેપાર માટે મૂલ્યવાન. આ જ વિરોધાભાસ છે જેના કારણે એક "પવિત્ર" જન્મથી નિકાસના ખોખા સુધીની સફર દૂધના પેકેટથી છુપાયેલી રહે છે.</span></p>
+    <p class="fade" style="color:#DBCDB2;font-size:1.02rem;text-align:center;max-width:760px;margin:24px auto 0"><span class="en">The same male calf is unwanted by the dairy, yet valuable to the meat and leather trade. That contradiction is exactly why the journey from a "sacred" birth to an export carton stays hidden from the milk packet.</span><span class="hi">वही नर बछड़ा डेरी के लिए अनचाहा है, फिर भी मांस और चमड़ा व्यापार के लिए मूल्यवान। यही विरोधाभास है जिसकी वजह से एक "पवित्र" जन्म से निर्यात के डिब्बे तक का सफ़र दूध के पैकेट से छिपा रहता है।</span><span class="gu">એ જ નર વાછરડું ડેરી માટે અણગમતું છે, છતાં માંસ અને ચામડા વેપાર માટે મૂલ્યવાન. આ જ વિરોધાભાસ છે જેના કારણે એક "પવિત્ર" જન્મથી નિકાસના ખોખા સુધીની સફર દૂધના પેકેટથી છુપાયેલી રહે છે.</span></p>
   </div>
 </section>
 
@@ -917,7 +918,7 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
 
     <div class="big-stat-box green fade" style="background:linear-gradient(135deg,#2e4a2e,#527A52)">
       <span class="bsn" style="font-size:clamp(2.4rem,5.5vw,3.6rem)">~₹11 <span style="font-size:.4em;font-weight:600"><span class="en">lakh crore / year</span><span class="hi">लाख करोड़ / वर्ष</span><span class="gu">લાખ કરોડ / વર્ષ</span></span></span>
-      <p class="bst"><span class="en">Value of India's milk output (2022-23). That is bigger than the value of paddy and wheat put together, and roughly 5% of India's entire economy (GDP).</span><span class="hi">भारत के दूध उत्पादन का मूल्य (2022-23)। यह धान और गेहूँ के कुल मूल्य से भी बड़ा है, और भारत की पूरी अर्थव्यवस्था (GDP) का लगभग 5%।</span><span class="gu">ભારતના દૂધ ઉત્પાદનનું મૂલ્ય (2022-23). આ ડાંગર અને ઘઉંના કુલ મૂલ્ય કરતાં પણ મોટું છે, અને ભારતના આખા અર્થતંત્ર (GDP)નો આશરે 5%.</span></p>
+      <p class="bst"><span class="en">Value of India's milk output (2022-23). That is bigger than the value of paddy and wheat put together, and roughly 5% of India's entire economy (GDP). About half of this value is cow milk; the rest is mostly buffalo.</span><span class="hi">भारत के दूध उत्पादन का मूल्य (2022-23)। यह धान और गेहूँ के कुल मूल्य से भी बड़ा है, और भारत की पूरी अर्थव्यवस्था (GDP) का लगभग 5%। इसमें करीब आधा मूल्य गाय के दूध का है, बाकी ज़्यादातर भैंस का।</span><span class="gu">ભારતના દૂધ ઉત્પાદનનું મૂલ્ય (2022-23). આ ડાંગર અને ઘઉંના કુલ મૂલ્ય કરતાં પણ મોટું છે, અને ભારતના આખા અર્થતંત્ર (GDP)નો આશરે 5%. તેમાં આશરે અડધું મૂલ્ય ગાયના દૂધનું છે, બાકી મોટાભાગે ભેંસનું.</span></p>
     </div>
 
     <h3 class="fade" style="color:var(--green-pale);margin-top:36px"><span class="en">Who makes the money?</span><span class="hi">पैसा कौन कमाता है?</span><span class="gu">પૈસા કોણ કમાય છે?</span></h3>
@@ -925,7 +926,7 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
       <div class="money-card">
         <span class="money-who"><span class="en">Milk owners / farmers</span><span class="hi">दूध मालिक / किसान</span><span class="gu">દૂધ માલિક / ખેડૂત</span></span>
         <span class="money-amt">~8 <span style="font-size:.5em;font-weight:600"><span class="en">crore households</span><span class="hi">करोड़ परिवार</span><span class="gu">કરોડ પરિવાર</span></span></span>
-        <p class="money-desc"><span class="en">Most of the milk value reaches roughly 8 crore rural households. But split per family, the income per cow is small, which is exactly why low-yield cows get removed.</span><span class="hi">दूध के मूल्य का ज़्यादातर हिस्सा करीब 8 करोड़ ग्रामीण परिवारों तक पहुँचता है। पर प्रति परिवार बाँटें तो प्रति गाय आय कम है, इसीलिए कम दूध वाली गायें हटा दी जाती हैं।</span><span class="gu">દૂધના મૂલ્યનો મોટાભાગ આશરે 8 કરોડ ગ્રામીણ પરિવારો સુધી પહોંચે. પણ પ્રતિ પરિવાર વહેંચો તો પ્રતિ ગાય આવક ઓછી છે, એટલે જ ઓછું દૂધ આપતી ગાય હટાવાય છે.</span></p>
+        <p class="money-desc"><span class="en">Most of the milk value reaches roughly 8 crore rural households. On average a milk-selling family earns only about ₹8,000 a month from it, so a cow that gives less is quickly removed.</span><span class="hi">दूध के मूल्य का ज़्यादातर हिस्सा करीब 8 करोड़ ग्रामीण परिवारों तक पहुँचता है। औसतन एक दूध बेचने वाला परिवार इससे महीने का सिर्फ़ करीब ₹8,000 कमाता है, इसलिए कम दूध देने वाली गाय जल्दी हटा दी जाती है।</span><span class="gu">દૂધના મૂલ્યનો મોટાભાગ આશરે 8 કરોડ ગ્રામીણ પરિવારો સુધી પહોંચે. સરેરાશ એક દૂધ વેચતો પરિવાર તેમાંથી મહિને ફક્ત આશરે ₹8,000 કમાય, એટલે ઓછું દૂધ આપતી ગાય ઝડપથી હટાવાય છે.</span></p>
       </div>
       <div class="money-card">
         <span class="money-who"><span class="en">Dairies and brands</span><span class="hi">डेरियाँ और ब्रांड</span><span class="gu">ડેરી અને બ્રાન્ડ</span></span>
@@ -935,7 +936,7 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
       <div class="money-card">
         <span class="money-who"><span class="en">Beef and leather trade</span><span class="hi">बीफ़ और चमड़ा व्यापार</span><span class="gu">બીફ અને ચામડા વેપાર</span></span>
         <span class="money-amt">~₹65,000 <span style="font-size:.5em;font-weight:600">Cr</span></span>
-        <p class="money-desc"><span class="en">Bovine-meat exports (~₹30,000 Cr) plus leather exports (~₹35,000 Cr). This money comes from the same animals the dairy discards, the male calves and spent cows.</span><span class="hi">गोजातीय मांस निर्यात (~₹30,000 Cr) और चमड़ा निर्यात (~₹35,000 Cr)। यह पैसा उन्हीं जानवरों से आता है जिन्हें डेरी फेंक देती है, नर बछड़े और थकी गायें।</span><span class="gu">ગૌજાતીય માંસ નિકાસ (~₹30,000 Cr) અને ચામડા નિકાસ (~₹35,000 Cr). આ પૈસા એ જ પ્રાણીઓમાંથી આવે જેમને ડેરી ફેંકી દે, નર વાછરડાં અને થાકેલી ગાય.</span></p>
+        <p class="money-desc"><span class="en">Their bodies feed two trades: leather exports (~₹35,000 Cr) and meat. Recorded meat exports (~₹30,000 Cr) are almost all buffalo; cow and bull meat sells mostly in an informal home market. Either way, the money comes from the same animals the dairy discards.</span><span class="hi">उनके शरीर दो कारोबार चलाते हैं: चमड़ा निर्यात (~₹35,000 Cr) और मांस। दर्ज मांस निर्यात (~₹30,000 Cr) लगभग पूरा भैंस का है; गाय और बैल का मांस ज़्यादातर अनौपचारिक घरेलू बाज़ार में बिकता है। दोनों ही हाल में पैसा उन्हीं जानवरों से आता है जिन्हें डेरी फेंक देती है।</span><span class="gu">તેમના શરીર બે વેપાર ચલાવે: ચામડા નિકાસ (~₹35,000 Cr) અને માંસ. નોંધાયેલી માંસ નિકાસ (~₹30,000 Cr) લગભગ આખી ભેંસની છે; ગાય અને બળદનું માંસ મોટાભાગે અનૌપચારિક ઘરેલું બજારમાં વેચાય. બંને રીતે પૈસા એ જ પ્રાણીઓથી આવે જેમને ડેરી ફેંકી દે છે.</span></p>
       </div>
       <div class="money-card">
         <span class="money-who"><span class="en">Government</span><span class="hi">सरकार</span><span class="gu">સરકાર</span></span>
@@ -1044,7 +1045,7 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
       </div>
     </div>
 
-    <p class="fade" style="color:#a0988c;font-size:.86rem;margin-top:22px;text-align:center"><span class="en">These are not slaughterhouse numbers. They are the demographic gap between expected births and actual census counts: informal culling, calf disposal, starvation, abandonment, and transport. The mechanism is scattered; the arithmetic is unavoidable.</span><span class="hi">ये बूचड़खाने के आँकड़े नहीं हैं। ये अपेक्षित जन्म और वास्तविक जनगणना के बीच का जनसांख्यिकीय अंतर है: अनौपचारिक हटाव, बछड़ा निपटान, भुखमरी, परित्याग, और परिवहन। तंत्र बिखरा है; गणित अटल है।</span><span class="gu">આ કતલખાનાના આંકડા નથી. આ અપેક્ષિત જન્મ અને વાસ્તવિક વસ્તીગણતરી વચ્ચેનો વસ્તીવિષયક ફરક છે: અનૌપચારિક હટાવ, વાછરડા નિકાલ, ભૂખમરો, ત્યાગ, અને પરિવહન. તંત્ર વિખરાયેલું છે; ગણિત અટળ છે.</span></p>
+    <p class="fade" style="color:#DBCDB2;font-size:1rem;margin-top:22px;text-align:center"><span class="en">These are not slaughterhouse numbers. They are the demographic gap between expected births and actual census counts: informal culling, calf disposal, starvation, abandonment, and transport. The mechanism is scattered; the arithmetic is unavoidable.</span><span class="hi">ये बूचड़खाने के आँकड़े नहीं हैं। ये अपेक्षित जन्म और वास्तविक जनगणना के बीच का जनसांख्यिकीय अंतर है: अनौपचारिक हटाव, बछड़ा निपटान, भुखमरी, परित्याग, और परिवहन। तंत्र बिखरा है; गणित अटल है।</span><span class="gu">આ કતલખાનાના આંકડા નથી. આ અપેક્ષિત જન્મ અને વાસ્તવિક વસ્તીગણતરી વચ્ચેનો વસ્તીવિષયક ફરક છે: અનૌપચારિક હટાવ, વાછરડા નિકાલ, ભૂખમરો, ત્યાગ, અને પરિવહન. તંત્ર વિખરાયેલું છે; ગણિત અટળ છે.</span></p>
   </div>
 </section>
 
@@ -1185,7 +1186,7 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
         <div class="q-body"><ul>
           <li><span class="en">Some are abandoned and become the stray cattle on our roads.</span><span class="hi">कुछ छोड़ दिए जाते हैं और सड़कों के आवारा मवेशी बन जाते हैं।</span><span class="gu">કેટલાક છોડી દેવાય અને રસ્તાના રખડતા ઢોર બને છે.</span></li>
           <li><span class="en">Many are trafficked across state and national borders for meat.</span><span class="hi">कई राज्य और देश की सीमाओं के पार मांस के लिए तस्करी किए जाते हैं।</span><span class="gu">ઘણા રાજ્ય અને દેશની સરહદો પાર માંસ માટે દાણચોરી થાય છે.</span></li>
-          <li><span class="en">India earns around 30,000 crore rupees a year exporting bovine meat.</span><span class="hi">भारत गोवंश मांस निर्यात से सालाना लगभग 30,000 करोड़ रुपये कमाता है।</span><span class="gu">ભારત ગૌવંશ માંસ નિકાસથી વર્ષે લગભગ 30,000 કરોડ રૂપિયા કમાય છે.</span></li>
+          <li><span class="en">India earns around 30,000 crore rupees a year exporting meat, almost all of it buffalo; cow and bull meat is mostly an informal, domestic trade.</span><span class="hi">भारत मांस निर्यात से सालाना लगभग 30,000 करोड़ रुपये कमाता है, जो लगभग पूरा भैंस का है; गाय और बैल का मांस ज़्यादातर अनौपचारिक घरेलू कारोबार है।</span><span class="gu">ભારત માંસ નિકાસથી વર્ષે લગભગ 30,000 કરોડ રૂપિયા કમાય છે, જે લગભગ આખું ભેંસનું છે; ગાય અને બળદનું માંસ મોટાભાગે અનૌપચારિક ઘરેલું વેપાર છે.</span></li>
         </ul></div>
       </div>
 
@@ -1210,6 +1211,17 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
           <li><span class="en">Honesty costs nothing. It only asks that the label match the life.</span><span class="hi">ईमानदारी का कोई दाम नहीं। वह बस इतना माँगती है कि लेबल ज़िंदगी से मेल खाए।</span><span class="gu">પ્રામાણિકતાનો કોઈ ભાવ નથી. તે ફક્ત એટલું માગે છે કે લેબલ જિંદગી સાથે મેળ ખાય.</span></li>
         </ul></div>
       </div>
+      <div class="q-card fade full-width" onclick="this.classList.toggle('open')">
+        <div class="q-badge">6</div>
+        <p class="q-main"><span class="en">Should Amul and other dairies take responsibility for the cows and bulls they discard, and build a real system for them?</span><span class="hi">क्या अमूल और दूसरी डेरियों को उन गायों और बैलों की ज़िम्मेदारी लेनी चाहिए जिन्हें वे छोड़ देती हैं, और उनके लिए एक असली व्यवस्था बनानी चाहिए?</span><span class="gu">શું અમૂલ અને બીજી ડેરીઓએ એ ગાય અને બળદની જવાબદારી લેવી જોઈએ જેમને તેઓ છોડી દે છે, અને તેમના માટે એક સાચી વ્યવસ્થા બનાવવી જોઈએ?</span></p>
+        <span class="q-tap"><span class="en">Tap to see the numbers</span><span class="hi">आँकड़े देखने के लिए टैप करें</span><span class="gu">આંકડા જોવા ટેપ કરો</span></span>
+        <div class="q-body"><ul>
+          <li><span class="en">Around 7 crore male calves are born every year. There is no official record of where they go.</span><span class="hi">हर साल करीब 7 करोड़ नर बछड़े पैदा होते हैं। कहाँ जाते हैं, इसका कोई आधिकारिक रिकॉर्ड नहीं।</span><span class="gu">દર વર્ષે આશરે 7 કરોડ નર વાછરડા જન્મે છે. તેઓ ક્યાં જાય તેનો કોઈ સત્તાવાર રેકોર્ડ નથી.</span></li>
+          <li><span class="en">Cows and bulls dumped when their milk drops become most of India's 50 lakh to 1 crore stray cattle.</span><span class="hi">दूध घटने पर छोड़ी गई गायें और बैल ही भारत के 50 लाख से 1 करोड़ आवारा मवेशियों का बड़ा हिस्सा हैं।</span><span class="gu">દૂધ ઘટતાં છોડી દેવાયેલી ગાય અને બળદ જ ભારતના 50 લાખથી 1 કરોડ રખડતા ઢોરનો મોટો ભાગ છે.</span></li>
+          <li><span class="en">Cooperatives earn from these animals their whole productive life. A small fund per litre could pay for shelters, retirement, and care.</span><span class="hi">सहकारी संस्थाएँ इन्हीं जानवरों से पूरी उम्र कमाती हैं। प्रति लीटर एक छोटा कोष आश्रय, बुढ़ापे की देखभाल का खर्च उठा सकता है।</span><span class="gu">સહકારી સંસ્થાઓ આ જ પ્રાણીઓથી આખી જિંદગી કમાય છે. પ્રતિ લિટર એક નાનો ફંડ આશ્રય, વૃદ્ધાવસ્થાની સંભાળનો ખર્ચ ઉઠાવી શકે.</span></li>
+          <li><span class="en">If the product is sold as ethical and sacred, why is the supply chain not transparent?</span><span class="hi">अगर उत्पाद नैतिक और पवित्र बताकर बेचा जाता है, तो आपूर्ति शृंखला पारदर्शी क्यों नहीं?</span><span class="gu">જો ઉત્પાદન નૈતિક અને પવિત્ર કહીને વેચાય છે, તો પુરવઠા સાંકળ પારદર્શક કેમ નથી?</span></li>
+        </ul></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1221,7 +1233,7 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
     <p style="max-width:760px;font-size:1.02rem;line-height:1.6"><span class="en">A data story about the distance between what India says about the cow and what India does to her. Built with public data, told in three languages, so the numbers can speak for themselves.</span><span class="hi">यह एक डेटा कहानी है, इस फ़ासले के बारे में कि भारत गाय के बारे में क्या कहता है और उसके साथ क्या करता है। सार्वजनिक आँकड़ों से बनी, तीन भाषाओं में कही, ताकि आँकड़े खुद बोल सकें।</span><span class="gu">આ એક ડેટા વાર્તા છે, એ અંતર વિશે કે ભારત ગાય વિશે શું કહે છે અને તેની સાથે શું કરે છે. જાહેર આંકડાથી બનેલી, ત્રણ ભાષામાં કહેલી, જેથી આંકડા પોતે બોલી શકે.</span></p>
 
     <h3 style="margin-top:40px;font-size:1.1rem;letter-spacing:.06em;text-transform:uppercase;font-family:'Inter',sans-serif;font-weight:800"><span class="en">Primary sources</span><span class="hi">मुख्य स्रोत</span><span class="gu">મુખ્ય સ્રોત</span></h3>
-    <ul style="list-style:none;padding:0;margin:14px 0 0;max-width:760px;font-size:.94rem;line-height:1.7;opacity:.85">
+    <ul style="list-style:none;padding:0;margin:14px 0 0;max-width:760px;font-size:1.04rem;line-height:1.8;opacity:1;color:#EAF4E8">
       <li>1. Department of Animal Husbandry & Dairying, Basic Animal Husbandry Statistics</li>
       <li>2. 20th Livestock Census, Government of India</li>
       <li>3. National Dairy Development Board (NDDB) milk production data</li>
@@ -1230,7 +1242,7 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
       <li>6. Ministry of Statistics (MoSPI), GDP contribution of livestock</li>
     </ul>
 
-    <p style="margin-top:36px;font-size:.86rem;opacity:.6"><span class="en">Figures are rounded for readability and reflect commonly cited national estimates. Treat them as the order of magnitude, not exact accounts.</span><span class="hi">पढ़ने में आसानी के लिए आँकड़े गोल किए गए हैं और आमतौर पर बताए जाने वाले राष्ट्रीय अनुमान दिखाते हैं। इन्हें सटीक हिसाब नहीं, बल्कि अंदाज़े के पैमाने की तरह लें।</span><span class="gu">વાંચવાની સરળતા માટે આંકડા ગોળ કરાયા છે અને સામાન્ય રીતે ટાંકાતા રાષ્ટ્રીય અંદાજ બતાવે છે. તેને ચોક્કસ હિસાબ નહીં, પણ અંદાજના પાયમાનાની જેમ લો.</span></p>
+    <p style="margin-top:36px;font-size:.95rem;opacity:.9;color:#D7E6D4"><span class="en">Figures are rounded for readability and reflect commonly cited national estimates. Treat them as the order of magnitude, not exact accounts.</span><span class="hi">पढ़ने में आसानी के लिए आँकड़े गोल किए गए हैं और आमतौर पर बताए जाने वाले राष्ट्रीय अनुमान दिखाते हैं। इन्हें सटीक हिसाब नहीं, बल्कि अंदाज़े के पैमाने की तरह लें।</span><span class="gu">વાંચવાની સરળતા માટે આંકડા ગોળ કરાયા છે અને સામાન્ય રીતે ટાંકાતા રાષ્ટ્રીય અંદાજ બતાવે છે. તેને ચોક્કસ હિસાબ નહીં, પણ અંદાજના પાયમાનાની જેમ લો.</span></p>
   </div>
 </footer>
 
