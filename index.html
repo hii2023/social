@@ -281,16 +281,6 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
 .q-body ul{list-style:none;padding:0;margin:16px 0 0;border-top:1px solid rgba(255,255,255,.12)}
 .q-body li{padding:9px 0 9px 20px;position:relative;border-bottom:1px solid rgba(255,255,255,.07);font-size:.98rem;color:rgba(255,255,255,.78);font-family:'Crimson Pro',serif;line-height:1.5}
 .q-body li::before{content:'\203A';position:absolute;left:2px;top:8px;color:var(--gold-light);font-weight:700;opacity:.8}
-.run-cow{position:fixed;bottom:6px;left:0;z-index:45;opacity:.55;pointer-events:none;transform:translateX(-130px);transition:transform .12s linear;filter:drop-shadow(0 2px 3px rgba(0,0,0,.28))}
-.run-cow svg{display:block}
-.run-cow .legA{transform-origin:32px 44px;animation:gallopA .42s linear infinite}
-.run-cow .legB{transform-origin:24px 44px;animation:gallopB .42s linear infinite}
-.run-cow{animation:cowBob .42s ease-in-out infinite}
-@keyframes gallopA{0%,100%{transform:rotate(20deg)}50%{transform:rotate(-20deg)}}
-@keyframes gallopB{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}
-@keyframes cowBob{0%,100%{margin-bottom:0}50%{margin-bottom:5px}}
-@media(max-width:560px){.run-cow{opacity:.45;transform:scale(.8) translateX(-130px)}}
-@media(prefers-reduced-motion:reduce){.run-cow{display:none}}
 </style>
 </head>
 <body>
@@ -1279,25 +1269,6 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
   </div>
 </footer>
 
-<div class="run-cow" aria-hidden="true">
-  <svg viewBox="0 0 100 70" width="72" height="50">
-    <path d="M16,30 q-8,5 -6,17" stroke="#5C3A1E" stroke-width="2.6" fill="none" stroke-linecap="round"/>
-    <g class="legB">
-      <rect x="22" y="42" width="5.5" height="23" rx="2.7" fill="#8A5A30"/>
-      <rect x="66" y="42" width="5.5" height="23" rx="2.7" fill="#8A5A30"/>
-    </g>
-    <ellipse cx="50" cy="33" rx="31" ry="15.5" fill="#C4956A" stroke="#2A1206" stroke-width="2.4"/>
-    <path d="M77,24 q11,-3 16,7 q3,9 -6,13 l-11,-3 z" fill="#C4956A" stroke="#2A1206" stroke-width="2.4"/>
-    <path d="M91,21 q3,-7 0,-11" stroke="#D9AB5A" stroke-width="2.8" fill="none" stroke-linecap="round"/>
-    <path d="M85,24 q-5,-4 -9,-1" stroke="#2A1206" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-    <circle cx="86" cy="30" r="1.4" fill="#2A1206"/>
-    <g class="legA">
-      <rect x="31" y="42" width="5.5" height="23" rx="2.7" fill="#C4956A"/>
-      <rect x="57" y="42" width="5.5" height="23" rx="2.7" fill="#C4956A"/>
-    </g>
-  </svg>
-</div>
-
 <script>
 function setLang(lang){
   document.documentElement.setAttribute('data-lang',lang);
@@ -1310,18 +1281,6 @@ document.addEventListener('DOMContentLoaded',function(){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('vis'); io.unobserve(e.target); } });
   },{threshold:0.12, rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.fade').forEach(function(el){ io.observe(el); });
-  var cow=document.querySelector('.run-cow');
-  if(cow){
-    var moveCow=function(){
-      var h=document.documentElement.scrollHeight-window.innerHeight;
-      var pct=h>0?window.scrollY/h:0;
-      var x=pct*(window.innerWidth+150)-130;
-      cow.style.transform='translateX('+x+'px)';
-    };
-    window.addEventListener('scroll',moveCow,{passive:true});
-    window.addEventListener('resize',moveCow);
-    moveCow();
-  }
 });
 </script>
 </body>
