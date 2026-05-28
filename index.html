@@ -63,6 +63,7 @@ nav{background:var(--brown-deep);padding:13px clamp(16px,4vw,24px);position:stic
 .hero-eyebrow{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-light);font-weight:700;margin-bottom:16px;display:block}
 .hero h1{color:var(--parchment);margin-bottom:18px;line-height:1.12}
 .hero-sub{font-size:clamp(1.05rem,2vw,1.22rem);color:var(--brown-pale);font-family:'Crimson Pro',serif;font-style:italic;line-height:1.6;margin-bottom:36px;opacity:.92}
+.hero-sub strong{color:var(--gold-light);font-weight:700;font-style:normal}
 .hero-cow svg{width:100%;max-width:300px;display:block;margin:0 auto}
 
 /* ===== KPI HERO ===== */
@@ -280,6 +281,16 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
 .q-body ul{list-style:none;padding:0;margin:16px 0 0;border-top:1px solid rgba(255,255,255,.12)}
 .q-body li{padding:9px 0 9px 20px;position:relative;border-bottom:1px solid rgba(255,255,255,.07);font-size:.98rem;color:rgba(255,255,255,.78);font-family:'Crimson Pro',serif;line-height:1.5}
 .q-body li::before{content:'\203A';position:absolute;left:2px;top:8px;color:var(--gold-light);font-weight:700;opacity:.8}
+.run-cow{position:fixed;bottom:6px;left:0;z-index:45;opacity:.55;pointer-events:none;transform:translateX(-130px);transition:transform .12s linear;filter:drop-shadow(0 2px 3px rgba(0,0,0,.28))}
+.run-cow svg{display:block}
+.run-cow .legA{transform-origin:32px 44px;animation:gallopA .42s linear infinite}
+.run-cow .legB{transform-origin:24px 44px;animation:gallopB .42s linear infinite}
+.run-cow{animation:cowBob .42s ease-in-out infinite}
+@keyframes gallopA{0%,100%{transform:rotate(20deg)}50%{transform:rotate(-20deg)}}
+@keyframes gallopB{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}
+@keyframes cowBob{0%,100%{margin-bottom:0}50%{margin-bottom:5px}}
+@media(max-width:560px){.run-cow{opacity:.45;transform:scale(.8) translateX(-130px)}}
+@media(prefers-reduced-motion:reduce){.run-cow{display:none}}
 </style>
 </head>
 <body>
@@ -1222,6 +1233,28 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
           <li><span class="en">If the product is sold as ethical and sacred, why is the supply chain not transparent?</span><span class="hi">अगर उत्पाद नैतिक और पवित्र बताकर बेचा जाता है, तो आपूर्ति शृंखला पारदर्शी क्यों नहीं?</span><span class="gu">જો ઉત્પાદન નૈતિક અને પવિત્ર કહીને વેચાય છે, તો પુરવઠા સાંકળ પારદર્શક કેમ નથી?</span></li>
         </ul></div>
       </div>
+      <div class="q-card fade" onclick="this.classList.toggle('open')">
+        <div class="q-badge">7</div>
+        <p class="q-main"><span class="en">Should the government fix welfare rules and shelters first, before pushing dairy to make even more milk?</span><span class="hi">क्या सरकार को और दूध उत्पादन का दबाव बढ़ाने से पहले कल्याण के नियम और गोशालाएँ ठीक करनी चाहिए?</span><span class="gu">શું સરકારે વધુ દૂધ ઉત્પાદનનું દબાણ વધારતા પહેલાં કલ્યાણના નિયમો અને ગૌશાળાઓ સરખી કરવી જોઈએ?</span></p>
+        <span class="q-tap"><span class="en">Tap to see the numbers</span><span class="hi">आँकड़े देखने के लिए टैप करें</span><span class="gu">આંકડા જોવા ટેપ કરો</span></span>
+        <div class="q-body"><ul>
+          <li><span class="en">India has anti-slaughter laws but no mandatory minimum welfare standards for dairy farms.</span><span class="hi">भारत में गोवध-रोधी क़ानून हैं, पर डेरी फार्मों के लिए कोई अनिवार्य न्यूनतम कल्याण मानक नहीं।</span><span class="gu">ભારતમાં ગૌહત્યા-વિરોધી કાયદા છે, પણ ડેરી ફાર્મ માટે કોઈ ફરજિયાત લઘુતમ કલ્યાણ ધોરણ નથી.</span></li>
+          <li><span class="en">50 lakh to 1 crore stray cattle roam our cities, a direct result of the economic cycle, not nature.</span><span class="hi">50 लाख से 1 करोड़ आवारा मवेशी हमारे शहरों में घूमते हैं, यह आर्थिक चक्र का सीधा नतीजा है, प्रकृति का नहीं।</span><span class="gu">50 લાખથી 1 કરોડ રખડતા ઢોર આપણા શહેરોમાં ફરે છે, એ આર્થિક ચક્રનું સીધું પરિણામ છે, કુદરતનું નહીં.</span></li>
+          <li><span class="en">Government-funded gaushalas are already overflowing. No budget can absorb 1.48 lakh animals removed every day.</span><span class="hi">सरकारी गोशालाएँ पहले से ही भरी हुई हैं। कोई बजट हर दिन हटाए जाने वाले 1.48 लाख जानवरों को नहीं संभाल सकता।</span><span class="gu">સરકારી ગૌશાળાઓ પહેલેથી છલકાઈ રહી છે. કોઈ બજેટ દરરોજ હટાવાતા 1.48 લાખ પ્રાણીઓને સમાવી ન શકે.</span></li>
+          <li><span class="en">Raising milk targets without solving this first only doubles the problem.</span><span class="hi">इसे पहले हल किए बिना दूध लक्ष्य बढ़ाना समस्या को दोगुना कर देता है।</span><span class="gu">આ પહેલાં ઉકેલ્યા વગર દૂધ લક્ષ્ય વધારવું સમસ્યાને બમણી કરે છે.</span></li>
+        </ul></div>
+      </div>
+      <div class="q-card fade" onclick="this.classList.toggle('open')">
+        <div class="q-badge">8</div>
+        <p class="q-main"><span class="en">Do we actually need cow's milk, or is it a habit we have never questioned?</span><span class="hi">क्या हमें सच में गाय के दूध की ज़रूरत है, या यह बस एक आदत है जिस पर हमने कभी सवाल नहीं किया?</span><span class="gu">શું આપણને ખરેખર ગાયના દૂધની જરૂર છે, કે પછી એ ફક્ત એક આદત છે જેના પર આપણે ક્યારેય સવાલ કર્યો નથી?</span></p>
+        <span class="q-tap"><span class="en">Tap to see the numbers</span><span class="hi">आँकड़े देखने के लिए टैप करें</span><span class="gu">આંકડા જોવા ટેપ કરો</span></span>
+        <div class="q-body"><ul>
+          <li><span class="en">The dairy economy exists because of demand. That demand is built on habit, culture, and taste, not strict nutritional need.</span><span class="hi">डेरी अर्थव्यवस्था माँग के कारण है। वह माँग आदत, संस्कृति और स्वाद पर टिकी है, सख़्त पोषण की ज़रूरत पर नहीं।</span><span class="gu">ડેરી અર્થતંત્ર માગના કારણે છે. એ માગ આદત, સંસ્કૃતિ અને સ્વાદ પર ટકેલી છે, કડક પોષણની જરૂર પર નહીં.</span></li>
+          <li><span class="en">Calcium, protein, and fat are all available from plant sources already common in Indian diets: dal, til, ragi, groundnut.</span><span class="hi">कैल्शियम, प्रोटीन और वसा सब पौधों से मिलते हैं जो भारतीय खाने में आम हैं: दाल, तिल, रागी, मूँगफली।</span><span class="gu">કેલ્શિયમ, પ્રોટીન અને ચરબી બધું છોડમાંથી મળે જે ભારતીય ખોરાકમાં સામાન્ય છે: દાળ, તલ, રાગી, મગફળી.</span></li>
+          <li><span class="en">This is not about telling anyone what to do. It is about whether we ever chose this consciously.</span><span class="hi">यह किसी को यह बताने के बारे में नहीं कि क्या करें। यह इस बारे में है कि क्या हमने कभी इसे सोच-समझकर चुना।</span><span class="gu">આ કોઈને શું કરવું એ કહેવા વિશે નથી. એ વિશે છે કે આપણે ક્યારેય આ સમજી-વિચારીને પસંદ કર્યું કે નહીં.</span></li>
+          <li><span class="en">If you think about it and still choose milk, at least you made that choice with open eyes.</span><span class="hi">अगर आप सोचकर भी दूध चुनते हैं, तो कम से कम वह चुनाव आपने खुली आँखों से किया।</span><span class="gu">જો તમે વિચારીને પણ દૂધ પસંદ કરો, તો ઓછામાં ઓછું એ પસંદગી તમે ખુલ્લી આંખે કરી.</span></li>
+        </ul></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1246,6 +1279,25 @@ html[data-lang="gu"] .en,html[data-lang="gu"] .hi{display:none!important}
   </div>
 </footer>
 
+<div class="run-cow" aria-hidden="true">
+  <svg viewBox="0 0 100 70" width="72" height="50">
+    <path d="M16,30 q-8,5 -6,17" stroke="#5C3A1E" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <g class="legB">
+      <rect x="22" y="42" width="5.5" height="23" rx="2.7" fill="#8A5A30"/>
+      <rect x="66" y="42" width="5.5" height="23" rx="2.7" fill="#8A5A30"/>
+    </g>
+    <ellipse cx="50" cy="33" rx="31" ry="15.5" fill="#C4956A" stroke="#2A1206" stroke-width="2.4"/>
+    <path d="M77,24 q11,-3 16,7 q3,9 -6,13 l-11,-3 z" fill="#C4956A" stroke="#2A1206" stroke-width="2.4"/>
+    <path d="M91,21 q3,-7 0,-11" stroke="#D9AB5A" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+    <path d="M85,24 q-5,-4 -9,-1" stroke="#2A1206" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <circle cx="86" cy="30" r="1.4" fill="#2A1206"/>
+    <g class="legA">
+      <rect x="31" y="42" width="5.5" height="23" rx="2.7" fill="#C4956A"/>
+      <rect x="57" y="42" width="5.5" height="23" rx="2.7" fill="#C4956A"/>
+    </g>
+  </svg>
+</div>
+
 <script>
 function setLang(lang){
   document.documentElement.setAttribute('data-lang',lang);
@@ -1258,6 +1310,18 @@ document.addEventListener('DOMContentLoaded',function(){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('vis'); io.unobserve(e.target); } });
   },{threshold:0.12, rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.fade').forEach(function(el){ io.observe(el); });
+  var cow=document.querySelector('.run-cow');
+  if(cow){
+    var moveCow=function(){
+      var h=document.documentElement.scrollHeight-window.innerHeight;
+      var pct=h>0?window.scrollY/h:0;
+      var x=pct*(window.innerWidth+150)-130;
+      cow.style.transform='translateX('+x+'px)';
+    };
+    window.addEventListener('scroll',moveCow,{passive:true});
+    window.addEventListener('resize',moveCow);
+    moveCow();
+  }
 });
 </script>
 </body>
